@@ -1,0 +1,50 @@
+﻿<Window x:Class="Kabanova_Lab4_WPF_68.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kabanova_Lab4_WPF_68"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Линейное уровнение" Margin="-2,-2,-34,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=" 0.2*"/>
+                        <ColumnDefinition Width=" 0.6*"/>
+                        <ColumnDefinition Width=" 0.2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+                        <Label Content="Введите А: "/>
+                        <TextBox x:Name="Width"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+                        <Label Content="Введите В:"/>
+                        <TextBox x:Name="High"/>
+                    </StackPanel>
+                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="RES1"/>
+
+                    <StackPanel Grid.Row="3" Grid.Column="1"
+                                Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Вычислить" Margin="10 20 10 20" Click="Button_Click_1"/>
+
+
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Квадратное уровнение" Margin="33,-2,-54,0">
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
